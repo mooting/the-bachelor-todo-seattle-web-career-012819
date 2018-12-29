@@ -24,8 +24,6 @@ end
 
 def get_average_age_for_season(data, season)
   season_data = data.fetch(season)
-
-
   (season_data.reduce(0) { |sum, contestant|
       sum + contestant["age"].to_f
   } / season_data.length).round
